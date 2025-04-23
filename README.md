@@ -56,7 +56,7 @@ Sur Mac, mise à jour de pandoc :
 brew upgrade pandoc
 ```
 
-## Génération des builds
+## Génération les builds
 
 Depuis la racine du projet.
 
