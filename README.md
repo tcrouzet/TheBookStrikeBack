@@ -30,7 +30,8 @@ Installer Latex (sur mac, j'utilise https://www.texmacs.org/tmweb/download/macos
 
 Sur le terminal:
 
-```which tex
+```bash
+which tex
 tex --version```
 
 Pour voir si install OK.
