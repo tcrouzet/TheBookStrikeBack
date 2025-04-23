@@ -74,8 +74,16 @@ pandoc src/LivreContreAttaque.md -o builds/LivreContreAttaque.pdf --metadata-fil
 
 ### ePub
 
+Mac
+
 ```bash
 pandoc src/LivreContreAttaque.md -f markdown+footnotes -t epub -o builds/LivreContreAttaque.epub -d templates/epub/epub.yml --resource-path=.:src::_i
+```
+
+Windows
+
+```bash
+pandoc src\LivreContreAttaque.md -f markdown+footnotes -t epub -o builds\LivreContreAttaque.epub -d templates\epub\epub.yml --resource-path=.;src;_i
 ```
 
 ### DOCX
