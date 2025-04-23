@@ -86,8 +86,8 @@ pandoc src/LivreContreAttaque.md -f markdown+footnotes -t docx -o  builds/LivreC
 
 ## Scribus
 
-J'ai essayé de travailler avec [Scribus](https://www.scribus.net/) me heurtant vite à de nombreuses limitation.
+J'ai essayé de travailler avec [Scribus](https://www.scribus.net/), me heurtant vite à de nombreuses limitations.
 
-J'ai développer un script d'importation Markdown, plus complet que la fonction native, mais j'ai un peu jeté l'éponge, tant l'API est limité.
+J'ai commencé à développé un script d'importation Markdown, plus complet que la fonction native, mais j'ai un peu jeté l'éponge, tant l'API est limité (faudra que j'y revienne).
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
