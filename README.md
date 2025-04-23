@@ -30,8 +30,8 @@ Installer Latex (sur mac, j'utilise https://www.texmacs.org/tmweb/download/macos
 
 Sur le terminal:
 
-'''which tex
-tex --version'''
+```which tex
+tex --version```
 
 Pour voir si install OK.
 
@@ -39,14 +39,14 @@ Installer Pandoc (https://pandoc.org/installing.html)
 
 Sur le terminal:
 
-'''which pandoc
-pandoc --version'''
+```which pandoc
+pandoc --version```
 
 Pour voir si install OK.
 
 Je travaille avec Texmacs 2025 et Pandoc 3.6.4
 
-Sur Mac, mise à jour de pandoc: brew upgrade pandoc
+Sur Mac, mise à jour de pandoc : brew upgrade pandoc
 
 ## Génération des builds
 
