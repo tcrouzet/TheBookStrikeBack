@@ -32,7 +32,8 @@ Sur le terminal:
 
 ```bash
 which tex
-tex --version```
+tex --version
+```
 
 Pour voir si install OK.
 
@@ -42,7 +43,8 @@ Sur le terminal:
 
 ```bash
 which pandoc
-pandoc --version```
+pandoc --version
+```
 
 Pour voir si install OK.
 
