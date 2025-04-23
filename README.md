@@ -6,7 +6,7 @@ Vous pouvez vous inspirer de ce modèle pour vos projets.
 
 L'idée est de basculer en mode coopération.
 Vous pouvez récupérer les fichiers, les lire, les annoter, faire des retours pour que le texte évolue.
-Pour les retour, le format DOCX reste idéal parce qu'il permets un mode suivi des corrections avancé.
+Pour les retours, le format DOCX reste idéal : il permet un suivi des corrections avancé.
 
 J'y parle de la chose faute d'avoir trouver un mot adéquat pour désigner la chose à combattre.
 
@@ -18,56 +18,30 @@ J'y parle de la chose faute d'avoir trouver un mot adéquat pour désigner la ch
 - [DOCX](builds/LivreContreAttaque.docx)
 - [TEX](builds/LivreContreAttaque.tex)
 
-
-## Structure
-
-[Repository](https://github.com/tcrouzet/TheBookStrikeBack)/
-├── LICENSE.md                  # Licence CC BY
-├── README.md                   # Présentation du projet, instructions
-├── CHANGELOG.md                # Historique des versions/modifications
-│
-├── src/                        # Sources Markdown (format principal)
-│   ├── archives/               # anciennes versions
-│   │   └── ...
-│   ├── _i/                     # Images utilisées dans le livre
-│   └── LivreContreAttaque.md   # Texte source
-│
-├── templates/                  # Templates pour différents formats
-│   ├── latex/                  # Template LaTeX
-│   │   ├── a5book.tex
-│   │   ├── latex.lua           # Code personalisation
-│   │   ├── latex.yml           # Description projet
-│   ├── epub/                   # Template EPUB
-│   │   ├── epub.yml            # Description projet
-│   │   └── styles.css
-│   └── docx/                   # Template Word
-│       ├── docx.yml
-│       ├── docx.lua
-│       └── model.docx
-│
-├── builds/                     # Versions compilées (PDF, epub, docx…)
-    └── ...
-
 ## Police
 
-Pour le PDF, j'ai choisi une police [Open Font License](https://openfontlicense.org/open-font-license-official-text/)
+Pour le PDF, j'ai choisi une police [Open Font License](https://openfontlicense.org/open-font-license-official-text/).
 
 La [Playfair Display](https://fonts.google.com/specimen/Playfair+Display?query=Playfair) est une police x-height élevé : les majuscules et les minuscules hautes dépassent à peine les minuscules basses (contrairement à ce qui était le cas dans les typos classiques comme le Garamond). Les polices avec  x-height élevé permettent de réduire le corps du texte tout en maintenant une forte lisibilité.
 
 ## Prérequis pour générer les builds
 
-Installer Latex (sur mac j'utilise https://www.texmacs.org/tmweb/download/macosx.en.html, version complète 4 Go).
+Installer Latex (sur mac, j'utilise https://www.texmacs.org/tmweb/download/macosx.en.html, version complète 4 Go).
 
 Sur le terminal:
-which tex
-tex --version
+
+'''which tex
+tex --version'''
+
 Pour voir si install OK.
 
 Installer Pandoc (https://pandoc.org/installing.html)
 
 Sur le terminal:
-which pandoc
-pandoc --version
+
+'''which pandoc
+pandoc --version'''
+
 Pour voir si install OK.
 
 Je travaille avec Texmacs 2025 et Pandoc 3.6.4
