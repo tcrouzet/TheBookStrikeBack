@@ -1,0 +1,13 @@
+css: 
+  - templates/epub/epub.css
+metadata:
+  title: "Le Livre contre-attaque"
+  author: "Thierry Crouzet"
+  lang: "fr"
+  rights: "(cc) by-nc-nd, 2025, Thierry Crouzet"
+  identifier: "tcrouzet.com"
+  date: "2025-04-23"
+  description: "Le livre arme pour lutter contre la chose."
+  subject: "essai, tracts, IA, fascisme, internet, technologie"
+  reference-location: document
+  # cover-image: ""

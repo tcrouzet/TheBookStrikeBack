@@ -1,0 +1,10 @@
+metadata:
+  title: "Le Livre contre-attaque"
+  subtitle: "Essai"
+  author: "Thierry Crouzet"
+  date: "2025-04-23"
+  lang: "fr-FR"
+  subject: "Essai"
+  # abstract: "Ou comment lutter contre la chose."
+reference-doc: "templates/docx/model.docx"
+resource-path: ["."]

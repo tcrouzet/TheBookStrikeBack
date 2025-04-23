@@ -1,0 +1,455 @@
+% Asynchrone latex template
+
+\documentclass[a5paper, 10pt, twoside]{book}
+
+% Packages nécessaires
+\usepackage{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{etoolbox}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{unicode-math}
+\usepackage{cleveref}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{subscript}
+\usepackage{fancyhdr}
+\usepackage{emptypage}
+\usepackage{calc}
+\usepackage{float}
+\usepackage{grid}
+
+% Packages pour le formatage du code
+\usepackage{fancyvrb}
+\usepackage{fvextra}
+\usepackage{framed}
+
+% Césures
+\usepackage[french]{babel}
+% \usepackage[protrusion=true,kerning=true,spacing=true]{microtype}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage[all]{nowidow}
+
+
+% Simplification de la gestion des notes de bas de page
+\usepackage{endnotes}
+\let\footnote=\endnote
+
+
+\XeTeXlinebreaklocale "fr"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+
+% Typographie française impeccable
+% https://mirrors.mit.edu/CTAN/macros/latex/contrib/impnattypo/impnattypo-fr.pdf
+\usepackage[
+  hyphenation,    % Améliore les césures françaises
+  parindent,      % Gère les alinéas trop courts
+  lastparline,    % Évite les dernières lignes de paragraphe trop courtes
+  rivers = 4      % Évite les "rivières" de blanc dans le texte
+]{impnattypo}
+
+
+% Restaurer l'indentation des premiers paragraphes après les titres
+% \makeatletter
+% \let\@afterindentfalse\@afterindenttrue
+% \makeatother
+
+
+% Configuration manuelle des aspects typographiques français
+\frenchbsetup{
+  IndentFirst=true,         % Ne pas indenter le premier paragraphe d'une section
+  FrenchFootnotes=false,     % Pas de notes de bas de page à la française 
+  AutoSpacePunctuation=true, % Espace automatique avant la ponctuation haute
+  ThinColonSpace=true,       % Espace fine avant les deux-points
+  og=«,                      % Guillemet ouvrant français
+  fg=»,                      % Guillemet fermant français
+  InnerGuillSingle=true      % Guillemets simples à l'intérieur des guillemets doubles
+}
+
+% Paramètres pour éviter les veuves et orphelines
+\widowpenalty=1000
+\clubpenalty=1000
+\displaywidowpenalty=1000
+
+% Paramètres pour la gestion des césures
+\AtBeginDocument{
+  \lefthyphenmin=4       % Minimum de caractères avant une césure
+  \righthyphenmin=3      % Minimum de caractères après une césure
+}
+\hyphenpenalty=50     % Pénalité pour les césures normales (valeur plus basse = plus de césures)
+\exhyphenpenalty=30   % Pénalité pour les césures consécutives
+\doublehyphendemerits=900
+\finalhyphendemerits=5000
+
+% Définir les espaces inter-mots
+% \spaceskip=0.3em plus 0.15em minus 0.1em % Contrôle précis de l'espace entre les mots
+
+
+% Amélioration de la justification
+\pretolerance=100
+\brokenpenalty=4991 % Pénalité pour les césures
+\tolerance=2000       % Permet un espacement plus souple (défaut: 200)
+\emergencystretch=3em % Espace supplémentaire si nécessaire
+\setlength{\hfuzz}{0.3pt} % Tolérance pour les dépassements horizontaux
+
+
+% Configuration de la géométrie de la page
+\geometry{
+  a5paper,
+  inner=28mm,
+  outer=20mm,
+  top=20mm,
+  bottom=25mm,
+  footskip=15mm
+}
+
+% Configuration des polices
+\defaultfontfeatures{Ligatures=TeX, Mapping=tex-text}
+\SetExtraKerning{encoding={*}, family={*}, series={*}, size={*}}{}
+\setmainfont{Playfair Display}
+\setsansfont{Playfair Display}
+
+% Définir la taille de police exacte à 9.5pt
+\makeatletter
+\renewcommand\normalsize{%
+   \@setfontsize\normalsize{9.5pt}{13.5pt}%
+   \abovedisplayskip 10\p@ \@plus2\p@ \@minus5\p@
+   \abovedisplayshortskip \z@ \@plus3\p@
+   \belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
+   \belowdisplayskip \abovedisplayskip
+   \let\@listi\@listI}
+\makeatother
+
+\setlength{\parskip}{0pt}  % Supprime l'espace entre paragraphes
+\setlength{\parindent}{1em}  % Indentation des paragraphes
+
+
+% Amélioration de la justification
+% \sloppy
+\hyphenpenalty=50
+\exhyphenpenalty=50
+\doublehyphendemerits=900
+\finalhyphendemerits=5000
+\setlength{\emergencystretch}{3em}
+
+% Saut de page avant + désactivation numéro de page
+\pretocmd{\chapter}{%
+  \cleardoublepage
+%   \thispagestyle{empty}
+}{}{}
+
+
+\pretocmd{\subsubsection}{%
+%   \cleardoublepage
+%   \thispagestyle{empty}
+}{}{}
+
+
+% Redéfinir la commande section pour ajouter l'espace voulu
+% \let\oldsection\section
+% \renewcommand{\section}[1]{%
+% %   \cleardoublepage
+%   \vspace*{6\baselineskip}%
+%   \oldsection{#1}%
+% }
+
+% H1 (chapter) centré sans numéro
+\titleformat{\chapter}
+  {\huge\sffamily\bfseries\centering} % Style centré
+  {}                                   % Supprime la numérotation
+  {0em}                                % Supprime l'espace réservé au numéro
+  {}                                   % Code avant le titre
+\titlespacing*{\chapter}
+  {0em}       % Indentation gauche
+  {8\baselineskip}       % Espace avant (négatif pour annuler l'espace par défaut)
+  {\baselineskip}   % Espace après
+
+% H2
+\titleformat{\section}
+  {\Large\sffamily\bfseries\raggedright}
+  {}
+  {0em}
+  {}
+\titlespacing*{\section}
+  {0pt}       % Indentation gauche
+  {2\baselineskip}       % Espace avant (négatif pour annuler l'espace par défaut)
+  {1\baselineskip}   % Espace après
+
+% Redéfinir \section pour ajouter un saut de ligne après
+\let\oldsection\section
+\renewcommand{\section}[1]{%
+  \oldsection{#1}%
+  \par\vspace{\baselineskip}% Ajoute un saut de ligne après le titre
+}
+
+% H3
+\titleformat{\subsection}
+  {\large\sffamily\centering}
+  {}
+  {0em}
+  {}
+\titlespacing*{\subsection}
+  {0pt}             % Indentation gauche
+  {-\parskip}       % Espace avant (négatif pour annuler l'espace par défaut)
+  {1.5\baselineskip}   % Espace après
+
+% H4
+\titleformat{\subsubsection}
+  {\normalsize\sffamily\centering\color{white}}
+  {}
+  {0em}
+  {}
+\titlespacing*{\subsubsection}
+  {0pt}       % Indentation gauche
+  {0em}       % Espace avant (négatif pour annuler l'espace par défaut)
+  {8\baselineskip}   % Espace après
+
+% H5
+\titleformat{\paragraph}
+  {\normalsize\sffamily\bfseries\centering}
+  {}
+  {0em}
+  {}
+
+% H6
+\titleformat{\subparagraph}
+  {\normalsize\raggedleft} % Alignement à droite
+  {}
+  {0em}
+  {}
+\titlespacing*{\subparagraph}
+  {0pt}             % Indentation gauche
+  {0.5\baselineskip - \parskip}       % Espace avant (négatif pour annuler l'espace par défaut)
+  {1.5\baselineskip}   % Espace après
+
+
+% Configuration des en-têtes et pieds de page - version corrigée
+\pagestyle{fancy}
+\fancyhf{} % Efface tous les champs d'en-tête et de pied de page
+\fancyfoot[C]{\thepage} % Place le numéro de page uniquement en bas au centre
+\renewcommand{\headrulewidth}{0pt} % Pas de ligne d'en-tête
+\renewcommand{\footrulewidth}{0pt} % Pas de ligne de pied de page
+
+% S'assurer que le style plain (utilisé pour les premières pages de chapitre) est cohérent
+\fancypagestyle{plain}{
+    \fancyhf{} % Efface tous les champs
+    \fancyfoot[C]{\thepage} % Numéro de page uniquement en bas au centre
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+
+% Quote
+\renewenvironment{quote}
+  {\begin{itshape}\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}}
+  {\end{itshape}\par\nopagebreak\vspace{0pt}}
+
+
+% Définir une commande personnalisée avec étoiles
+\newcommand{\starrule}{%
+  \par\vspace{1.5em}%
+  {\centering%
+  \Large\text{\&}\hspace{0.7em}%
+  \par}%
+  \vspace{1.5em}%
+  \noindent%
+}
+
+
+
+% % Personnalisation des notes de fin
+% \renewcommand{\notesname}{Notes}
+
+% % Pour les notes de fin (endnotes)
+% \makeatletter
+% \renewcommand\enoteformat{%
+%   \rightskip\z@
+%   \leftskip\z@
+%   \parindent=1em
+%   \fontsize{8pt}{9.5pt}\selectfont % Taille explicite en points
+%   \leavevmode\llap{\makeenmark}%
+% }
+% \makeatother
+
+% Personnalisation des notes de fin avec titre formaté comme H2
+\makeatletter
+% Redéfinir la commande qui génère le titre des notes
+\renewcommand{\enoteheading}{%
+  % Utiliser le même format que les H2 (section)
+  {\Large\sffamily\bfseries\raggedright Notes\par}%
+  \vspace{\baselineskip}% Ajouter un espace après le titre
+}
+
+% Conserver votre format pour le contenu des notes
+\renewcommand\enoteformat{%
+  \rightskip\z@
+  \leftskip\z@
+  \parindent=1em
+  \fontsize{8pt}{9.5pt}\selectfont % Taille explicite en points
+  \leavevmode\llap{\makeenmark}%
+}
+\makeatother
+
+% Images sans légende
+\newcommand{\pandocbounded}[1]{%
+  \begin{center}
+    \sbox0{#1}%
+    \ifdim\ht0>\textheight
+      \resizebox*{\textwidth}{!}{#1}%
+    \else
+      #1%
+    \fi
+  \end{center}
+}
+
+% Désactiver la numérotation des titres
+\setcounter{secnumdepth}{0}
+
+% Styles pour les liens
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=cyan,
+}
+
+% Configuration de fancyvrb pour les blocs de code
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{%
+  fontsize=\small,%
+  xleftmargin=-\parindent,%    % Pas de marge à gauche
+  xrightmargin=0pt,%   % Pas de marge à droite
+  frame=none%
+}
+\BeforeBeginEnvironment{verbatim}{\par\addvspace{\baselineskip}\begin{minipage}{\linewidth}\begin{samepage}}
+\AfterEndEnvironment{verbatim}{\end{samepage}\end{minipage}\par\addvspace{\baselineskip}}
+    
+% Définir la commande \tightlist utilisée par Pandoc
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}%
+}
+
+
+% Définition de l'environnement Shaded pour les blocs de code
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}
+  {\begin{snugshade}\footnotesize\verbatim@font}
+  {\end{snugshade}}
+
+% Définition de l'environnement pour le code en ligne
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+
+% Structure document
+
+\begin{document}
+
+% Page titre
+
+$if(title)$
+\title{$title$}
+$endif$
+
+$if(author)$
+\author{$author$}
+$endif$
+
+$if(date)$
+\date{$date$}
+$endif$
+
+$if(subtitle)$
+\newcommand{\subtitle}{$subtitle$}
+$endif$
+
+$if(publisher)$
+\newcommand{\publisher}{$publisher$}
+$endif$
+
+$if(rights)$
+\newcommand{\rights}{$rights$}
+$endif$
+
+% Page de titre personnalisée
+$if(title)$
+\begin{titlepage}
+    \centering
+    {\huge\bfseries $title$\par}
+    $if(subtitle)$
+    \vspace{0.5cm}
+    {\large $subtitle$\par}
+    $endif$
+    \vspace{2cm}
+    $if(author)$
+    {\large $author$\par}
+    $endif$
+    \vfill
+    $if(publisher)$
+    {\large $publisher$\par}
+    $endif$
+    \vspace{0.5cm}
+    $if(date)$
+    {\large $date$\par}
+    $endif$
+    $if(rights)$
+    \vspace{0.5cm}
+    {\small $rights$\par}
+    $endif$
+\end{titlepage}
+\cleardoublepage
+$endif$
+
+$if(toc)$
+\tableofcontents
+$endif$
+
+\vspace*{8\baselineskip}
+
+$body$
+
+% Afficher les notes à la fin du document
+\clearpage
+\begingroup
+\parindent 0pt
+\parskip 1ex
+\def\enotesize{\small}
+\theendnotes
+\endgroup
+
+
+
+\end{document}

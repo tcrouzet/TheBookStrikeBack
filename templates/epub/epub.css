@@ -1,0 +1,78 @@
+@page {margin: 1.2em;}
+
+body{margin:0;padding:0;font-family:serif;font-weight:normal}
+a,a:visited,a:link{text-decoration:none}
+
+h1, h2, h3, div.page-beak {
+	page-break-before: always;
+}
+
+p{
+	text-align:justify;
+	text-indent:1em;
+	margin:0;
+	line-height:1.2em;
+	hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
+h1{color:#888;font-family:sans-serif,monospace;font-size:2em;margin-bottom:1em;margin-top:3em;margin-right:0em;margin-left:0em;text-indent:0em;text-align:center;padding-left:0em;padding-right:0em;padding-top:0em;page-break-inside:avoid;font-style:normal;hyphens:none}
+
+h2{font-family:sans-serif,monospace;font-size:1.3em;margin-bottom:0em;margin-top:0em;margin-right:0em;margin-left:0em;text-indent:0em;text-align:center;font-style:normal;color:#000;padding-left:0em;padding-right:0em;padding-top:.20em;page-break-inside:avoid;hyphens:none; text-align: left;}
+	
+h3{color:transparent;padding:14vh 0 12vh 0;text-align: center;}
+
+h4{color:#888;font-family:sans-serif;font-size:1.1em;font-weight:normal;margin-bottom:1em;margin-top:0em;margin-right:0em;margin-left:0em;text-indent:0em;text-align:left;padding-left:0em;padding-right:0em;padding-top:0em;page-break-inside:avoid;font-style:italic}
+
+h5{text-align:center;margin-bottom:0em;margin-top:0em;margin-right:0em;margin-left:0em;font-weight:normal;font-style:italic;line-height:1.2em}
+
+h6{text-align:right;margin-bottom:2em;margin-top:0.5em;margin-right:0;margin-left:0;font-weight:normal;line-height:1.2em;font-size:100%}
+
+h1, h2, h3, h4, h5, h6 {
+    hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+}
+
+blockquote{margin-left: 0;margin-right:0; margin-top:1rem;margin-bottom: 0rem;}
+blockquote p{margin-left: 0;margin-right:0; margin-top:1rem;margin-bottom: 1rem;text-indent:0em;font-style:italic;}
+
+div.top-para{margin-top: 1rem;font-style:italic;text-align: justify;}
+div.right{text-align: right;margin-bottom: 1rem;margin-top: 0.25rem}
+div.poem-solo{margin-left: 1rem;margin-top:1rem;margin-bottom:1rem;font-style:italic;}
+div.poem-top{margin-left: 1rem;margin-top:1rem;font-style:italic;}
+div.poem-bottom{margin-left: 1rem;margin-bottom:1rem;text-indent:1em;font-style:italic;}
+div.poem{margin-left: 1rem;text-indent:1em;font-style:italic;}
+div.page-beak{color: transparent}
+
+p.author{text-align: center;text-indent: 0}
+p.date{text-align: center;text-indent: 0;font-size: 0.5rem;color: #888;}
+div.rights{text-align: center;text-indent: 0;margin-top: 1rem;}
+h1.unnumbered{display: none;}
+div.abstract{text-align: center;margin-top: 1rem;}
+div.abstract-title{font-weight:normal;text-indent: 0;}
+
+img{
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+hr{width:50%}
+
+.footnote-ref {
+    font-size: 0.8em;
+    vertical-align: super;
+    line-height: 0;
+    color: #2c5282;
+    text-decoration: none;
+}
+
+.footnote-back {
+    font-size: 0.9em;
+    color: #2c5282;
+    text-decoration: none;
+    margin-left: 0.5em;
+}
