@@ -50,7 +50,11 @@ Pour voir si install OK.
 
 Je travaille avec Texmacs 2025 et Pandoc 3.6.4
 
-Sur Mac, mise à jour de pandoc : brew upgrade pandoc
+Sur Mac, mise à jour de pandoc :
+
+```bash
+brew upgrade pandoc
+```
 
 ## Génération des builds
 
