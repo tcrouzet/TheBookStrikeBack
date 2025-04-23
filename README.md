@@ -81,7 +81,13 @@ pandoc src/LivreContreAttaque.md -f markdown+footnotes -t epub -o builds/LivreCo
 ### DOCX
 
 ```bash
-pandoc src/LivreContreAttaque.md -f markdown+footnotes -t docx -o  builds/LivreContreAttaque.docx -d templates/docx/docx.yml  --lua-filter=templates/docx/docx.lua --resource-path=.:src::_i
+pandoc src/LivreContreAttaque.md -f markdown+footnotes -t docx -o  builds/LivreContreAttaque.docx -d templates/docx/docx.yml --lua-filter=templates/docx/docx.lua --resource-path=.:src::_i
 ```
+
+## Scribus
+
+J'ai essayé de travailler avec [Scribus](https://www.scribus.net/) me heurtant vite à de nombreuses limitation.
+
+J'ai développer un script d'importation Markdown, plus complet que la fonction native, mais j'ai un peu jeté l'éponge, tant l'API est limité.
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
