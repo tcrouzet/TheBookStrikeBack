@@ -39,7 +39,8 @@ Installer Pandoc (https://pandoc.org/installing.html)
 
 Sur le terminal:
 
-```which pandoc
+```bash
+which pandoc
 pandoc --version```
 
 Pour voir si install OK.
