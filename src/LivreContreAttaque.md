@@ -38,7 +38,7 @@ Une observation à la fois historique et logique s’impose : quand la centrali
 
 Le sociologue Alain Bihr explique que le fascisme s’accompagne « d’une concentration (un renforcement) et d’une centralisation (en termes d’organisation interne) accrues du pouvoir politique au sein des appareils d’État, au détriment des périphéries étatiques (les pouvoirs publics locaux) et des organes de la société civile[^11]. » Autrement dit : le centre se renforce pendant que la périphérie se délite.
 
-Il se trouve que depuis le début du XXI<sup>e</sup> siècle, nous avons développé des technologies qui facilitent la concentration des pouvoirs. Plus de centralisation donne plus de puissance à quelques-uns, et ils centralisent davantage pour maximiser encore leurs pouvoirs, au point de se griser d’eux-mêmes et devenir dangereux pour nous tous. Les conditions sont réunies pour l’émergence de régimes autoritaires renforcés par la technologie.
+Il se trouve que depuis le début du XXI<sup>e</sup> siècle, nous avons développé des technologies qui facilitent la concentration des pouvoirs. Plus de centralisation donne plus de puissance à quelques-uns, et ils centralisent davantage pour maximiser encore leurs pouvoirs, au point de se griser d’eux-mêmes et devenir dangereux. Les conditions sont réunies pour l’émergence de régimes autoritaires renforcés par la technologie.
 
 Dans *The Atlantic* en février 2025, on peut lire[^12] : « Aucune bonne raison ou argument ne peut être avancé pour qu’une personne \[Musk] ou une entité \[le Doge, département de l’efficacité gouvernementale dirigé par Musk] aient un tel accès à autant d’agences gouvernementales contenant autant d’informations sensibles. Même dans un seul bureau gouvernemental, l’accès administratif complet à tous les systèmes est un privilège qui n’existe pas. À l’échelle de l’ensemble du gouvernement, ce serait incompréhensible. »
 
@@ -76,7 +76,7 @@ Le Multicast, c’est comme acheter un livre, puis le prêter à un ami. Si l’
 
 **~2000**. Si le Multicast n’a jamais été déployé au niveau matériel, il l’est en revanche sous forme de simulations logicielles, généralement appelées P2P, pour communication de pair-à-pair. À la suite d’Usenet (1979) et de Napster (1999), Gnutella est le premier protocole totalement décentralisé dédié au partage de fichiers. Il devient possible de communiquer transversalement sans supervision.
 
-Une fois encore, c’est la théorie. Tout protocole de communication a une signature. Les routeurs au niveau des fournisseurs d’accès peuvent identifier les échanges, les bloquer ou les traquer. Selon les pays, au nom de la défense des droits d’auteur, des programmes plus ou moins invasifs de surveillance des usagers se mettent en place, notamment en France avec Hadopi, mais ces programmes sont souvent inefficaces car de nouvelles solutions techniques apparaissent, utilisant la cryptographie et les VPN (Virtual Private Network). Le provider peut juste dire que quelque chose de louche circule sur la ligne. Il doit choisir entre laisser faire ou couper les échanges.
+Une fois encore, c’est la théorie. Tout protocole de communication a une signature. Les routeurs au niveau des fournisseurs d’accès peuvent identifier les échanges, les bloquer ou les traquer. Selon les pays, au nom de la défense des droits d’auteur, des programmes plus ou moins invasifs de surveillance des usagers se mettent en place, notamment en France avec Hadopi, mais ces programmes sont souvent inefficaces : de nouvelles solutions techniques apparaissent, utilisant la cryptographie et les VPN (Virtual Private Network). Le provider peut juste dire que quelque chose de louche circule sur la ligne. Il doit choisir entre laisser faire ou couper les échanges.
 
 Parce que le P2P implique des échanges privés, sans supervision, son usage n’est encouragé, ni par les gouvernements ni par les industriels qui entendent garder le contrôle du réseau. Pour soutenir le développement de l’Unicast, ils créent d’immenses salles des machines, puis des datacenters.
 
@@ -92,7 +92,7 @@ Ce n’est jamais ouvertement reconnu, mais tous ces liens jugés artificiels pa
 
 Pour ma part, depuis 1998, j’éditais bonweb.com, un annuaire des meilleurs sites web, version électronique de mon livre du même nom, qui s’était hissé parmi les gros sites français. En novembre 2007, Google nous a blacklistés, au prétexte que nous étions une ferme à liens, alors que nos liens étaient choisis, éditorialisés, exactement comme dans un *Gault&Millau* ou un *Guide Michelin*[^20]. Décision unilatérale. Le trafic s’est aussitôt effondré. Qui contrôle les serveurs et les algorithmes contrôle le Web et y impose sa dictature. On bascule d’un web social à un web algorithmique.
 
-**~2010**. Plus Google casse la blogosphère, plus il pousse les internautes vers les réseaux sociaux naissants où ils retrouvent matière à débat et lieux d’expression. Au début, aucun algorithme ne pilote les conversations. Quand on a cent amis, ils voient tous nos messages et réciproquement.
+**~2010**. Plus Google casse la blogosphère, plus il nous pousse vers les réseaux sociaux naissants où nous retrouvons matière à débat et lieux d’expression. Au début, aucun algorithme ne pilote les conversations. Quand on a cent amis, ils voient tous nos messages et réciproquement.
 
 En parallèle, plus le trafic passe par Google, plus le référencement pour apparaître en tête des résultats de recherche coûte cher, et mieux s’en tirent les sites puissants, notamment les plateformes de vente à distance et les réseaux sociaux. Des blogs survivent, mais isolés.
 
@@ -106,7 +106,7 @@ Braudel et d’autres historiens ont montré que le capitalisme s’efforce d’
 
 Une anecdote. Alors que j’écris ce texte, mon fils aîné arrive en Andorre avec son école pour une semaine de ski. Il m’envoie un SMS pour me dire que son opérateur lui facture la connexion. Je cherche sur Google pour vérifier. Une heure plus tard, sur Facebook, une publicité me propose d’acheter une eSim adaptable à la région géographique. Voici un exemple de surveillance. Durant plusieurs jours, on tentera de me vendre cette eSim.
 
-Qui contrôle les serveurs contrôle les algorithmes, donc l’acquisition des données. Plus rien n’est fortuit. Avant la numérisation du monde, quand les lecteurs cherchaient un livre, ils visitaient leur librairie, parcouraient les rayons et tombaient souvent sur des textes éloignés de leurs centres d’intérêt. Le fan de SF et de BD que j’étais a ainsi découvert Hemingway, Faulkner et les polars de Manchette. Si j’étais sous influence, c’était sous celle de mon libraire et de son algorithme personnel. Quand je changeais de boutique, je changeais d’algorithme, alors que désormais il est difficile de s’émanciper des algorithmes.
+Qui contrôle les serveurs contrôle les algorithmes, donc l’acquisition des données. Plus rien n’est fortuit. Avant la numérisation du monde, quand les lecteurs cherchaient un livre, ils visitaient leur librairie, parcouraient les rayons et tombaient souvent sur des textes éloignés de leurs centres d’intérêt. Le fan de SF et de BD que j’étais a ainsi découvert Hemingway, Faulkner et les polars de Manchette. Si j’étais sous influence, c’était sous celle de mon libraire et de son algorithme personnel. Quand je changeais de boutique, je changeais d’algorithme, alors que désormais il est difficile de s’émanciper.
 
 Nous finissons par avaler une montagne de contenus indésirables placés sous nos yeux pour nous maintenir *in situ* et consommer des publicités. Ces contenus altèrent notre imaginaire, notre philosophie, notre conception du monde, nos opinions politiques, d’autant qu’ils proviennent prétendument de nos « amis » et que nous leur accordons plus confiance qu’aux informations proposées par les journalistes. Un réseau social algorithmique n’a rien de social : c’est une machine à nous emprisonner.
 
@@ -164,7 +164,7 @@ Dans les dictatures, la voix du Parti unique s’impose à tous. Sur les platefo
 
 Loin d’être dupe, le technocapitaliste jouit de son pouvoir sur les masses. Plus ses outils d’emprisonnement progressent, plus il se croit tout-puissant et se persuade que la technologie peut régler même les problèmes qu’elle a provoqués en premier lieu.
 
-Cette ferveur solutionniste, cette croyance en la possibilité de solutions simples, qui seraient uniformément imposées à tous, est une autre caractéristique du totalitarisme. Une fois la Terre invivable, il nous suffira de partir sur Mars, donc inutile de se préoccuper du réchauffement climatique. Ainsi, le technocapitaliste, bientôt adepte du technosolutionnisme, finit souvent par devenir un danger collectif. Enfiévré par ses grandes idées, par sa richesse et son pouvoir sur les consciences, il néglige la diversité des particularités locales et individuelles. Seule la fuite en avant l’intéresse, quitte à entraîner le monde à sa perte. 
+Cette ferveur solutionniste, cette croyance en la possibilité de solutions simples, qui seraient uniformément imposées à tous, est une autre caractéristique du totalitarisme. Une fois la Terre invivable, il nous suffira de partir sur Mars, donc inutile de se préoccuper du réchauffement climatique. Ainsi, le technocapitaliste, bientôt adepte du technosolutionnisme, finit souvent par devenir dangereux. Enfiévré par ses grandes idées, par sa richesse et son pouvoir sur les consciences, il néglige la diversité des particularités locales et individuelles. Seule la fuite en avant l’intéresse, quitte à entraîner le monde à sa perte. 
 
 ## La chose mise à l’épreuve
 
@@ -265,13 +265,13 @@ J’ai utilisé des mots comme technocollabos (je ne vois pas comment appeler au
 
 Je ne trouve toujours pas de nom pour la chose. J’ai pensé à Unicratie pour désigner une forme d’influence globale à travers l’Unicast, avec « cratie » qui vient du grec ancien kratos, signifiant « pouvoir », « force » ou « autorité ». Autrement dit le pouvoir de l’Unicast. On pourrait lui opposer la Multicratie, c’est-à-dire le pouvoir du Multicast, un pouvoir qui n’aurait rien de centralisé, qui serait distribué, coopératif, bienveillant.
 
-Ça reste trop technique. Pas susceptible d’incarner la chose, de nous faire prendre conscience de sa malveillance. Je ne pense pas qu’il soit nécessaire d’utiliser le préfixe « techno » ou « cyber », parce que le problème n’est pas la technologie en général mais certaines technologies numériques, celles qui renforcent des tendances et en atténuent d’autres pour servir des intérêts centralisés, celles qui nous persuadent de notre singularité tout en nous enfermant dans des bulles de réalités hypothétiques. Il m’arrive de penser idiocratie, parce que la chose tente de faire de nous des idiots pour mieux nous soumettre, mais en rien des idiots ne créent les algorithmes. Il subsiste une volonté derrière la chose, un consentement d’une élite, une acceptation des masses.
+Ça reste trop technique. Pas susceptible d’incarner la chose, de nous faire prendre conscience de sa malveillance. Je ne pense pas qu’il soit nécessaire d’utiliser le préfixe « techno » ou « cyber », parce que le problème n’est pas la technologie en général mais certaines technologies, celles qui renforcent des tendances et en atténuent d’autres pour servir des intérêts centralisés, celles qui nous persuadent de notre singularité tout en nous enfermant dans des bulles de réalités hypothétiques. Il m’arrive de penser idiocratie, parce que la chose tente de faire de nous des idiots pour mieux nous soumettre, mais en rien des idiots ne créent les algorithmes. Il subsiste une volonté derrière la chose, un consentement d’une élite, une acceptation des masses.
 
 C’est comme si nous tous ou presque renoncions à notre liberté : les technocapitalistes de faire autrement, de gagner moins, nous autres de renoncer à leurs outils. Un aveuglement généralisé nous conduit au pire, comme avec les bouleversements climatiques. Nous savons et nous continuons sans rien changer. La chose cultive notre masochisme.
 
 Quand je pense à la chaîne de causalité : Unicast, Algorithmes, Populisme, j’ai en tête UAP, sigle d’une assurance française. J’aurais préféré un acronyme, mais les mots sont les mots, et UAP fait rire plutôt que peur.
 
-Peut-être est-il encore trop tôt pour nommer. Nous ne la comprenons pas assez la chose pour la désigner, mais peut-être que la circonscrire suffit à la combattre, car ce régime fou, presque inhumain, n’est pas une fatalité.
+Peut-être est-il encore trop tôt pour nommer. Nous ne comprenons pas assez la chose pour la désigner, mais peut-être que la circonscrire suffit à la combattre, car ce régime fou, presque inhumain, n’est pas une fatalité.
 
 # Le livre : arme de résistance
 
@@ -453,7 +453,7 @@ Dans la pratique, on ne crée pas un compte Mastodon comme un compte Facebook, o
 
 Le mail appartient au Fediverse depuis toujours. Il existe de nombreux serveurs mail installables sur n’importe quel ordinateur. Parce que le mail est décentralisé, aucun technocapitaliste n’a réussi à s’approprier la technologie. Nous continuons à disposer d’adresses avec des noms de domaine divers, les boîtes du type @gmail.com ne représentant que 30 % des adresses[^47]. L’idéal est bien sûr de posséder un mail à son propre nom, ce qui implique d’acheter un nom de domaine. Ainsi, il est possible de changer de serveur sans prévenir ses contacts.
 
-Pour lutter contre le technofascisme, il est primordial au moins un pied dans le Fediverse et d’y pratiquer le crossposting des messages publiés sur les plateformes centralisées, afin que nos lecteurs aient le choix d’où nous lire, et qu’ils mesurent qu’il n’existe pas un seul internet mais une myriade de solutions entrecroisées, aussi entremêlées que le réseau des libraires sur le territoire.
+Pour lutter contre le technofascisme, il est primordial d’avoir au moins un pied dans le Fediverse et d’y pratiquer le crossposting des messages publiés sur les plateformes centralisées, afin que nos lecteurs aient le choix d’où nous lire, et qu’ils mesurent qu’il n’existe pas un seul internet mais une myriade de solutions entrecroisées, aussi entremêlées que le réseau des libraires sur le territoire.
 
 Le Fediverse n’est toutefois pas encore la panacée puisqu’il repose sur des instances, donc des serveurs sur le réseau Unicast, serveurs de fait censurables. De nouvelles approches apparaissent qui utilisent les réseaux Multicast comme Nostr. La résistance s’organise.
 
@@ -495,7 +495,7 @@ Par principe, les solutions décentralisées sont libres et ouvertes, de sorte q
 
 Dans *Le Figaro*, Luc Ferry a publié un article inquiétant où il écrit[^49] : « Mettre les avancées de l’IA en accès libre laisse l’opportunité aux terroristes, comme au premier imbécile venu, de détourner le meilleur des projets pour fabriquer des armes de destruction massive. »
 
-Depuis la première page de ce texte, je m’efforce de montrer que la centralisation et le secret autour des algorithmes fabriquent la chose, et Ferry préfère que les IA restent entre quelques mains, qui pourront en user selon leur bon vouloir. Comment dire ? Il y a des technocollabo qui s’ignorent.
+Depuis la première page de ce texte, je m’efforce de montrer que la centralisation et le secret autour des algorithmes fabriquent la chose, et Ferry préfère que les IA restent entre quelques mains, qui pourront en user selon leur bon vouloir. Comment dire ? Il y a des technocollabos qui s’ignorent.
 
 Précision : un logiciel libre est libre d’utilisation, de copie, de modification et de distribution quand un logiciel open source expose son code, sans nous donner nécessairement le droit de le modifier ou de le mettre en œuvre. Un logiciel libre est toujours open source, la réciproque n’étant pas implicite.
 
