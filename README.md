@@ -60,6 +60,12 @@ brew upgrade pandoc
 
 Depuis la racine du projet.
 
+Pour tout générer d'un coup sur Mac/Linux:
+
+```bash
+./gen.sh
+```
+
 ### TEX
 
 ```bash
