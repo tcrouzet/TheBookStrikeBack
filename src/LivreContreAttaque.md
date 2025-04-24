@@ -516,7 +516,7 @@ Aux institutions de militer pour l’ouverture. Elles-mêmes devraient cesser de
 3. Se préparer à fuir : à tout moment la situation peut devenir éthiquement ou politiquement déplaisante. Par exemple, beaucoup d’utilisateurs ont quitté Facebook en 2011 quand le tableau de Courbet, *L’Origine du monde*, y a été censuré[^50].
 4. Avoir plus qu’un pied dans le Fediverse : y être actif, sinon c’est être défaitiste.
 5. Bien sûr, lire des Livres loin de l’agitation du temps réel et des algorithmes.
-6. Garder espoir. Quand Musk s’est mit à délirer, les ventes de Tesla se sont effondrées, peuvent que nous autres utilisateurs/consommateurs ne sommes pas impuissants[^51].
+6. Garder espoir. Quand Musk s’est mit à délirer, les ventes de Tesla se sont effondrées, peuves que nous autres utilisateurs/consommateurs ne sommes pas impuissants[^51].
 
 # Lire, c’est résister
 
