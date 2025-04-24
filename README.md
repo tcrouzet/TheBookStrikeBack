@@ -24,6 +24,8 @@ Pour le PDF, j'ai choisi une police [Open Font License](https://openfontlicense.
 
 La [Playfair Display](https://fonts.google.com/specimen/Playfair+Display?query=Playfair) est une police x-height élevé : les majuscules et les minuscules hautes dépassent à peine les minuscules basses (contrairement à ce qui était le cas dans les typos classiques comme le Garamond). Les polices avec  x-height élevé permettent de réduire le corps du texte tout en maintenant une forte lisibilité.
 
+La fonte est, en théorie, disponible sur les systèmes Debians dans le package texlive-fonts-extra
+
 ## Prérequis pour générer les builds
 
 Installer Latex (sur mac, j'utilise https://www.texmacs.org/tmweb/download/macosx.en.html, version complète 4 Go).
@@ -58,44 +60,13 @@ brew upgrade pandoc
 
 ## Générer les builds
 
-Depuis la racine du projet.
-
-Pour tout générer d'un coup sur Mac/Linux:
+Depuis la racine du projet, lancer le script gen.sh avec en argument le format choisi parmi tex, pdf, epub ou docx.
 
 ```bash
-./gen.sh
-```
-
-### TEX
-
-```bash
-pandoc src/LivreContreAttaque.md -o builds/LivreContreAttaque.tex  --metadata-file=templates/latex/latex.yml --template=templates/latex/A5book.tex --pdf-engine=xelatex --no-highlight --top-level-division=chapter --shift-heading-level-by=0 --lua-filter=templates/latex/latex.lua --resource-path=.:src::_i
-```
-
-### PDF
-
-```bash
-pandoc src/LivreContreAttaque.md -o builds/LivreContreAttaque.pdf --metadata-file=templates/latex/latex.yml --template=templates/latex/A5book.tex --pdf-engine=xelatex --no-highlight --top-level-division=chapter --shift-heading-level-by=0 --lua-filter=templates/latex/latex.lua --resource-path=.:src::_i
-```
-
-### ePub
-
-Mac
-
-```bash
-pandoc src/LivreContreAttaque.md -f markdown+footnotes -t epub -o builds/LivreContreAttaque.epub -d templates/epub/epub.yml --resource-path=.:src::_i
-```
-
-Windows
-
-```bash
-pandoc src\LivreContreAttaque.md -f markdown+footnotes -t epub -o builds\LivreContreAttaque.epub -d templates\epub\epub.yml --resource-path=.;src;_i
-```
-
-### DOCX
-
-```bash
-pandoc src/LivreContreAttaque.md -f markdown+footnotes -t docx -o  builds/LivreContreAttaque.docx -d templates/docx/docx.yml --lua-filter=templates/docx/docx.lua --resource-path=.:src::_i
+./gen.sh tex
+./gen.sh pdf
+./gen.sh epub
+./gen.sh docx
 ```
 
 ## Scribus
