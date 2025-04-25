@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# https://impagina.org/scribus-scripter-api
+
 import scribus
 import re
 import os

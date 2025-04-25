@@ -9,7 +9,7 @@ Vous pouvez récupérer les fichiers, les lire, les annoter, faire des retours p
 Pour les retours, le format DOCX autorise un suivi des corrections avancé.
 [Vous pouvez aussi créer des issues sur GitHub.](https://github.com/tcrouzet/TheBookStrikeBack/issues)
 
-J'y parle de la chose faute d'avoir trouver un mot adéquat pour désigner la chose à combattre.
+Dans ce court essai, je parle de la chose faute d'avoir trouver un mot adéquat pour désigner la chose à combattre.
 
 *PS : Il manque un s dans le nom du depôt. Si je corrige en TheBookStrikesBack, l'URL initial sera cassé.*
 
