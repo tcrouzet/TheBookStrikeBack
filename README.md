@@ -60,13 +60,14 @@ brew upgrade pandoc
 
 ## Générer les builds
 
-Depuis la racine du projet, lancer le script gen.sh avec en argument le format choisi parmi tex, pdf, epub ou docx.
+Depuis la racine du projet, lancer le script gen.sh avec en argument le format choisi parmi tex, pdf, epub, docx ou all pour tout générer.
 
 ```bash
 ./gen.sh tex
 ./gen.sh pdf
 ./gen.sh epub
 ./gen.sh docx
+./gen.sh all
 ```
 
 ## Scribus
