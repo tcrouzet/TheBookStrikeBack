@@ -11,6 +11,8 @@ Pour les retours, le format DOCX autorise un suivi des corrections avancé.
 
 J'y parle de la chose faute d'avoir trouver un mot adéquat pour désigner la chose à combattre.
 
+*PS : Il manque un s dans le nom du depôt. Si je corrire en TheBookStrikesBack, l'URL initial sera cassé.*
+
 ## Formats disponibles
 
 - [Markdown](src/LivreContreAttaque.md)
