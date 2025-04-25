@@ -6,7 +6,8 @@ Vous pouvez vous inspirer de ce modèle pour vos projets.
 
 L'idée est de basculer en mode coopération.
 Vous pouvez récupérer les fichiers, les lire, les annoter, faire des retours pour que le texte évolue.
-Pour les retours, le format DOCX reste idéal : il permet un suivi des corrections avancé.
+Pour les retours, le format DOCX autorise un suivi des corrections avancé.
+[Vous pouvez aussi créer des issues sur GitHub.](https://github.com/tcrouzet/TheBookStrikeBack/issues)
 
 J'y parle de la chose faute d'avoir trouver un mot adéquat pour désigner la chose à combattre.
 
