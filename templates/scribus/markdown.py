@@ -337,21 +337,14 @@ class Markdown2Scribus:
         
         self.update_directory(md_file)
 
-        # Créer un cadre de texte si aucun n'est sélectionné
+        # Tester si frame selected
         try:
             self.text_frame = scribus.getSelectedObject()
             if scribus.getObjectType(self.text_frame) != "TextFrame":
                 raise Exception
         except:
-            # Aucun cadre de texte sélectionné, on en crée un
-            page_width = scribus.getPageWidth()
-            page_height = scribus.getPageHeight()
-            margins = scribus.getPageMargins()
-            self.text_frame = scribus.createText(
-                margins[1], margins[0], 
-                page_width - margins[1] - margins[3], 
-                page_height - margins[0] - margins[2]
-            )
+            scribus.messageBox("Information", "Aucun cadre de texte sélectionné")
+            return True
         
         # Lire le fichier Markdown
         try:
@@ -359,14 +352,14 @@ class Markdown2Scribus:
                 self.md_content = f.read()
         except Exception as e:
             scribus.messageBox("Erreur", f"Impossible de lire le fichier: {str(e)}")
-            return
+            return True
         
         # Update MD
         self.md_content = self.replace_nbsp(self.md_content)
         self.md_content = self.clean_blockquote_spaces(self.md_content)
         self.md_content = self.tag_ln(self.md_content)
+        self.md_content = self.tag_stars_in_code(self.md_content)
         
-    
     def via_html(self):
         # Créer un fichier HTML temporaire
         try:
@@ -411,20 +404,25 @@ class Markdown2Scribus:
         # dump(scribus.getParagraphStyles())
         # dump(scribus.getCharStyles())
 
+        scribus.setRedraw(False)
         self.init_frame()
         
         self.md_content = self.md_content.replace('\n\n', '\n')
         scribus.insertText(self.md_content, 0, self.text_frame)
-
-        scribus.messagebarText("Apply heading...")
+    
         self.apply_heading()
-        scribus.messagebarText("Apply heading...")
         self.process_blockquotes()
         self.process_bold()
         self.process_italic()
         self.process_superscript()
         self.process_subscript()
         self.restore_ln()
+        self.process_spacer()
+        self.process_code()
+        self.restore_stars()
+
+        scribus.setRedraw(True)
+        scribus.hyphenateText(self.text_frame)
 
         return True
 
@@ -594,6 +592,7 @@ class Markdown2Scribus:
             scribus.selectText(match_start, 5, self.text_frame)
             scribus.deleteText(self.text_frame)
 
+
     def process_subscript(self):
         """Traite les exposants - trouve tous les matches puis les traite"""
         
@@ -619,6 +618,61 @@ class Markdown2Scribus:
             # Supprimer <sup> du début
             scribus.selectText(match_start, 5, self.text_frame)
             scribus.deleteText(self.text_frame)
+
+
+    def process_spacer(self):
+        """Traite les lignes --- - trouve tous les matches puis les traite"""
+        
+        # Récupérer le texte
+        frame_text = scribus.getAllText(self.text_frame)
+        
+        
+        # Trouver TOUTES les lignes contenant seulement ---
+        matches = list(re.finditer(r'---', frame_text, re.MULTILINE))
+        
+        # Traiter de la fin vers le début pour éviter les décalages
+        for match in reversed(matches):
+            match_start = match.start()
+            match_end = match.end()
+            
+            # Sélectionner la ligne ---
+            scribus.selectText(match_start, match_end - match_start, self.text_frame)
+            scribus.setParagraphStyle('spacer', self.text_frame)
+            
+            # Remplacer --- par *
+            scribus.deleteText(self.text_frame)
+            scribus.insertText('*', match_start, self.text_frame)
+
+
+    def process_code(self):
+        """Traite les blocs de code - trouve tous les matches puis les traite"""
+        
+        # Récupérer le texte
+        frame_text = scribus.getAllText(self.text_frame)
+        
+        # Regex pour trouver les blocs de code
+        matches = list(re.finditer(r'```[a-zA-Z]*[\r\n]+(.*?)[\r\n]+```', frame_text, re.DOTALL))
+        
+        # Traiter de la fin vers le début pour éviter les décalages
+        for match in reversed(matches):
+            match_start = match.start()
+            match_end = match.end()
+            code_content = match.group(1)
+            
+            # Remplacer les \n par des line breaks Unicode (comme dans restore_ln)
+            code_with_linebreaks = code_content.replace('\n', '\u2028')
+            code_with_linebreaks = code_content.replace('\r', '\u2028')
+            
+            # Supprimer tout le bloc ```...```
+            scribus.selectText(match_start, match_end - match_start, self.text_frame)
+            scribus.deleteText(self.text_frame)
+            
+            # Insérer le code avec line breaks
+            scribus.insertText(code_with_linebreaks, match_start, self.text_frame)
+            
+            # Sélectionner le contenu inséré et appliquer le style de paragraphe
+            scribus.selectText(match_start, len(code_with_linebreaks), self.text_frame)
+            scribus.setParagraphStyle('code', self.text_frame)
 
 
     def add_page_breaks(self, style):
@@ -679,6 +733,40 @@ class Markdown2Scribus:
             scribus.deleteText(self.text_frame)
             scribus.insertText('\u2028', match_start, self.text_frame)  # Line Separator Unicode
 
+    def tag_stars_in_code(self, text):
+        """Remplace les * par <STAR> dans les blocs de code uniquement"""
+        
+        def replace_stars_in_match(match):
+            # Récupérer le contenu du bloc de code (groupe 1)
+            code_content = match.group(1)
+            # Remplacer les * par <STAR>
+            code_content = code_content.replace('*', '<STAR>')
+            # Reconstruire le bloc complet
+            return f"```{match.group(0).split('```')[0].split('\n')[0]}\n{code_content}\n```"
+        
+        # Regex pour capturer les blocs de code
+        pattern = r'```[a-zA-Z]*\n(.*?)\n```'
+        
+        return re.sub(pattern, replace_stars_in_match, text, flags=re.DOTALL)
+    
+    def restore_stars(self):        
+        # Récupérer le texte
+        frame_text = scribus.getAllText(self.text_frame)
+        
+        # Trouver TOUS les <SAUT>
+        matches = list(re.finditer(r'<STAR>', frame_text))
+        
+        # Traiter de la fin vers le début pour éviter les décalages
+        for match in reversed(matches):
+            match_start = match.start()
+            match_end = match.end()
+            
+            # Sélectionner <SAUT>
+            scribus.selectText(match_start, match_end - match_start, self.text_frame)
+            
+            # Remplacer par line break (Shift+Enter)
+            scribus.deleteText(self.text_frame)
+            scribus.insertText('*', match_start, self.text_frame)
 
     def handle_text_overflow(self):
         """Déroule automatiquement les gabarits page droite/gauche selon le débordement"""
@@ -740,178 +828,16 @@ class Markdown2Scribus:
         
         return pages_created
 
-
-    def modify_sla(self):
-        """
-        Sauvegarde le document Scribus, le ferme, modifie le fichier .sla pour
-        insérer des <breakframe/> à la place d'un marqueur, puis le rouvre.
-        """
-
-  
-        try:
-
-            doc_name = scribus.getDocName()
-            if not doc_name:
-                scribus.messageBox("Attention", "Le document n'est pas encore sauvegardé. Veuillez le sauvegarder avant d'exécuter ce script.", scribus.ICON_WARNING, scribus.BUTTON_OK)
-                return
-
-            temp_doc_path = tempfile.NamedTemporaryFile(suffix='.sla', delete=False, mode='w', encoding='utf-8')
-
-            #Sauvegarder le document courant
-            if not scribus.saveDoc():
-                scribus.messageBox("Erreur", "Impossible de sauvegarder le document courant.")
-                return
-
-            #Fermer le document
-            if not scribus.closeDoc():
-                scribus.messageBox("Erreur", "Impossible de fermer le document courant.")
-                return
-            
-            return
-
-            # Parser le fichier XML
-            tree = ET.parse(doc_name)
-            root = tree.getroot()
-
-            # Rechercher tous les cadres de texte (ITEM type="2")
-            # et itérer sur leur contenu textuel
-            # La structure exacte peut varier, mais généralement le texte est dans <ITEXT>
-            # sous des <StoryText> ou directement sous <TextFlow>
-            found_and_modified = False
-            for item in root.findall(".//ITEM[@TYPE='2']"): # Cherche les éléments ITEM de type 2 (cadres de texte)
-                # La structure exacte des balises de texte peut varier selon la version de Scribus
-                # et le contenu. On cherche généralement <ITEXT> ou <StoryText> ou <StoryPar>
-                # C'est la partie la plus délicate et peut nécessiter une inspection manuelle de votre SLA.
-                
-                # Exemple simple : chercher du texte dans les éléments <ITEXT>
-                for itext_elem in item.findall(".//ITEXT"):
-                    if itext_elem.text and "###SAUTFRAME###" in itext_elem.text:
-                        original_text = itext_elem.text
-                        # Remplacer le marqueur par la balise <breakframe/>
-                        # ATTENTION : La balise <breakframe/> doit être encadrée de balises ITEXT
-                        # pour que Scribus la reconnaisse.
-                        # Ex: <ITEXT CSTART="x"/> doit être <ITEXT CSTART="x"><breakframe/></ITEXT>
-                        # C'est très délicat. Une meilleure approche serait de créer un nouvel élément
-                        # et de diviser le texte.
-
-                        # Une approche plus simple et plus sûre pour un remplacement direct :
-                        # Remplacer le marqueur par une entité XML qui sera traitée par Scribus
-                        # ou insérer une balise <breakframe/> en tant que sibling si la structure le permet.
-                        # Pour un remplacement direct dans le texte, Scribus ne reconnaîtra pas <breakframe/>
-                        # s'il est simplement "collé" dans le texte d'une ITEXT.
-                        # Il est crucial d'avoir <ITEXT><breakframe/></ITEXT> ou similaire.
-
-                        # Voici une approche qui tente d'insérer <breakframe/> comme un élément frère (sibling)
-                        # ou de modifier l'ITEXT pour inclure la balise.
-                        
-                        # Approche 1 (plus propre pour XML mais plus complexe à gérer dans la structure Scribus) :
-                        # Si votre marqueur est censé être *entre* des paragraphes ou des segments de texte.
-                        # Cette partie est très spécifique à la structure XML exacte de votre SLA.
-                        # Il est probable que vous deviez manipuler `itext_elem.tail` ou insérer un nouvel élément.
-
-                        # Approche 2 (plus simple, mais le <breakframe/> pourrait ne pas être interprété
-                        # si Scribus attend une structure spécifique) :
-                        # Remplacer le texte du nœud et espérer que Scribus le traite.
-                        # Malheureusement, Scribus ne traite pas une balise comme <breakframe/>
-                        # simplement parce qu'elle est dans le texte d'un nœud <ITEXT>.
-                        # Il faut qu'elle soit une balise XML distincte pour Scribus.
-
-                        # LA BONNE APPROCHE : Dupliquer le contenu du nœud <ITEXT> et insérer
-                        # un nouvel élément <breakframe/> comme un frère ou comme un enfant spécifique.
-                        
-                        # Étant donné la complexité de l'insertion correcte de <breakframe/> en XML,
-                        # je vais montrer un remplacement direct *comme si* <breakframe/> pouvait être
-                        # une simple chaîne, ce qui n'est pas le cas pour Scribus.
-                        # Une vraie solution impliquerait de subdiviser le nœud <ITEXT> et d'insérer un `<PARSTART/>` ou similaire
-                        # et une nouvelle structure avec le saut.
-
-                        # **Simplification pour l'exemple (peut ne pas fonctionner comme attendu directement dans Scribus)**
-                        # Le plus simple est de remplacer un marqueur par le caractère de saut de cadre interne de Scribus.
-                        # Cependant, le caractère de saut de cadre n'est pas un caractère Unicode simple.
-                        # Si <breakframe/> est une balise XML, elle doit être traitée comme telle.
-
-                        # Solution plus réaliste (mais non testée car dépend de la structure exacte du SLA) :
-                        # On va tenter de remplacer un marqueur textuel par une balise XML <breakframe/>
-                        # en manipulant les éléments XML directement.
-
-                        # Supposons que le texte est dans <ITEXT> et que <ITEXT> est un enfant de <StoryText> ou <StoryPar>
-                        parent_element = itext_elem.parent
-                        if parent_element is not None:
-                            # Trouver l'index de itext_elem parmi ses frères
-                            children = list(parent_element)
-                            try:
-                                index = children.index(itext_elem)
-                                # Si le marqueur est trouvé, divisez l'ITEXT si nécessaire et insérez breakframe
-                                if "###SAUTFRAME###" in itext_elem.text:
-                                    parts = itext_elem.text.split("###SAUTFRAME###", 1)
-                                    itext_elem.text = parts[0] # Conserver la première partie
-
-                                    # Créer le nouvel élément <breakframe/>
-                                    breakframe_elem = ET.Element("breakframe")
-                                    
-                                    # Insérer le breakframe après l'élément ITEXT courant
-                                    parent_element.insert(index + 1, breakframe_elem)
-                                    
-                                    # Si il y a une deuxième partie de texte, créer un nouvel ITEXT pour elle
-                                    if len(parts) > 1 and parts[1]:
-                                        new_itext_elem = ET.Element("ITEXT")
-                                        new_itext_elem.text = parts[1]
-                                        # Copier les attributs de style si nécessaire (très important!)
-                                        for key, value in itext_elem.attrib.items():
-                                            if key not in ['CSTART', 'CLENGTH']: # Attributs spécifiques au texte
-                                                new_itext_elem.set(key, value)
-                                        parent_element.insert(index + 2, new_itext_elem)
-                                        
-                                    found_and_modified = True
-                                    break # Sortir de la boucle ITEXT une fois le remplacement fait
-                            except ValueError:
-                                # itext_elem n'est pas un enfant direct, structure plus complexe
-                                pass
-                if found_and_modified: # Si des modifications ont été faites dans ce ITEM, on peut passer au suivant
-                    continue
-                    
-            if not found_and_modified:
-                scribus.messageBox("Information", "Aucun marqueur '###SAUTFRAME###' trouvé pour insertion de saut de cadre.", scribus.ICON_INFORMATION, scribus.BUTTON_OK)
-                # Restaurer le document si rien n'a été fait et éviter de le rouvrir vide
-                scribus.openDoc(doc_name)
-                return
-
-
-            # Écrire le XML modifié (en utilisant minidom pour un formatage lisible)
-            # Il est important d'utiliser la fonction `tostring` puis `parseString` de minidom
-            # pour obtenir un XML bien formaté et propre.
-            raw_xml_string = ET.tostring(root, encoding='utf-8', xml_declaration=True)
-            reparsed_xml = minidom.parseString(raw_xml_string)
-            
-            # Sauvegarder le fichier temporaire avec le XML modifié
-            with open(temp_doc_path, "wb") as f: # Utilisez 'wb' pour l'écriture binaire
-                f.write(reparsed_xml.toprettyxml(indent="  ", encoding="utf-8")) # Indentation pour la lisibilité
-
-            # Supprimer l'ancien fichier et renommer le nouveau
-            os.remove(doc_name)
-            os.rename(temp_doc_path, doc_name)
-
-            # 5. Rouvrir le document modifié
-            scribus.statusMessage("Réouverture du document modifié...")
-            scribus.openDoc(doc_name)
-            scribus.messageBox("Succès", "Le document a été modifié et rouvert avec les sauts de cadre.", scribus.ICON_INFORMATION, scribus.BUTTON_OK)
-
-        except scribus.ScribusError as e:
-            scribus.messageBox("Erreur Scribus", str(e), scribus.ICON_ERROR, scribus.BUTTON_OK)
-            # Tenter de rouvrir le document original si une erreur Scribus se produit après la fermeture
-            if doc_name and not scribus.haveDoc():
-                scribus.openDoc(doc_name)
-        except FileNotFoundError:
-            scribus.messageBox("Erreur Fichier", "Le fichier du document n'a pas été trouvé.", scribus.ICON_ERROR, scribus.BUTTON_OK)
-        except ET.ParseError as e:
-            scribus.messageBox("Erreur XML", f"Erreur lors de l'analyse du fichier SLA : {e}\nAssurez-vous que le fichier est un XML valide.", scribus.ICON_ERROR, scribus.BUTTON_OK)
-        except Exception as e:
-            scribus.messageBox("Erreur Inattendue", f"Une erreur inattendue est survenue : {e}", scribus.ICON_ERROR, scribus.BUTTON_OK)
-        finally:
-            # Nettoyage : Supprimer le fichier temporaire s'il existe toujours
-            if os.path.exists(temp_doc_path):
-                os.remove(temp_doc_path)
-            scribus.statusMessage("") # Efface le message de statut
+    def frame_creation(self):
+        # Aucun cadre de texte sélectionné, on en crée un
+        page_width = scribus.getPageWidth()
+        page_height = scribus.getPageHeight()
+        margins = scribus.getPageMargins()
+        self.text_frame = scribus.createText(
+            margins[1], margins[0], 
+            page_width - margins[1] - margins[3], 
+            page_height - margins[0] - margins[2]
+        )
 
 if __name__ == '__main__':
     convert = Markdown2Scribus()
