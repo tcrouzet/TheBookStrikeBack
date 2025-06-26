@@ -46,12 +46,12 @@ class PostProdScribus:
         self.update_directory(self.sla)
         self.output = self.sla.replace(".sla", "_postprod.sla")
 
-        self.insert_breakframes_before_titles()
+        self.insert_breakframes_before()
 
         return
 
 
-    def insert_breakframes_before_titles(self):
+    def insert_breakframes_before(self, styles=["h1", "h2", "h4"]):
         if not os.path.exists(self.sla):
             scribus.messageBox("Erreur", f"Le fichier source '{self.sla}' n'existe pas.")
             return False
@@ -95,7 +95,7 @@ class PostProdScribus:
                             # Attention: assurez-vous que 'h2' correspond bien à la valeur de l'attribut PARENT dans votre XML
                             # et non au nom du style de Scribus (qui pourrait être "Heading 2" mais se traduire en "h2" dans le XML).
                             # Vérifiez votre fichier SLA directement pour la valeur exacte.
-                            if next_elem.tag == "para" and next_elem.get('PARENT') == "h2":
+                            if next_elem.tag == "para" and next_elem.get('PARENT') in styles:
                                 # Vérifie si un <breakframe/> n'est PAS déjà juste avant cette séquence
                                 # On regarde l'élément précédent dans la liste des enfants de story_text_elem
                                 if j > 0:
