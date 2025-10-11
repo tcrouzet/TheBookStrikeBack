@@ -33,25 +33,21 @@ La fonte est, en théorie, disponible sur les systèmes Debians dans le package 
 
 Installer Latex (sur mac, j'utilise https://www.texmacs.org/tmweb/download/macosx.en.html, version complète 4 Go).
 
-Sur le terminal:
+Sur le terminal pour voir si install OK :
 
 ```bash
 which tex
 tex --version
 ```
 
-Pour voir si install OK.
-
 Installer Pandoc (https://pandoc.org/installing.html)
 
-Sur le terminal:
+Sur le terminal pour voir si install OK :
 
 ```bash
 which pandoc
 pandoc --version
 ```
-
-Pour voir si install OK.
 
 Je travaille avec Texmacs 2025 et Pandoc 3.6.4
 
