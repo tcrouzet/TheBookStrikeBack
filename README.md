@@ -49,7 +49,7 @@ which pandoc
 pandoc --version
 ```
 
-Je travaille avec Texmacs 2025 et Pandoc 3.6.4
+Je travaille avec Texmacs 2025 et derniernève version de Pandoc.
 
 Sur Mac, mise à jour de pandoc :
 
