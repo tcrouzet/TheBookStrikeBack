@@ -1,12 +1,16 @@
-L’inquiétude ne cesse de croître face aux poussées autoritaristes qui animent les dirigeants politiques en Russie, en Chine, aux États-Unis, au cœur même de l’Europe, pourtant construite pour éviter la répétition des horreurs passées. Dans ce contexte anxiogène, pour fêter l’investiture de Donald Trump, élu quarante-septième président des États-Unis, Elon Musk, son comparse du moment, lève le bras droit, le tend, main à l’horizontale : un salut nazi[^1] ! Des observateurs ont qualifié ce moment, le 20 janvier 2025 à Washington, de jour zéro du technofascisme[^2]. En vérité, cette « chose » encore mal définie se répand depuis des décennies. Pour nous en défendre, à titre individuel, collectif et institutionnel, il ne nous reste que les livres et les autres objets culturels qui circulent comme eux, à travers un réseau de distribution maillé à la surface des territoires, hors de la juridiction des centres de pouvoir oligarchique. Après l’inquiétude monte l’espoir d’un réveil. Le Livre avec un grand L contre-attaque, et ce petit texte part à l’assaut des murailles adverses.
+L’inquiétude ne cesse de croître face aux poussées autoritaristes qui animent les dirigeants politiques en Russie, en Chine, aux États-Unis, au cœur même de l’Europe, pourtant construite pour éviter la répétition des horreurs passées. Dans ce contexte anxiogène, pour fêter l’investiture de Donald Trump, élu quarante-septième président des États-Unis, Elon Musk, son comparse du moment, lève le bras droit, le tend, main à l’horizontale : un salut nazi[^1] ! Des observateurs ont qualifié ce moment, le 20 janvier 2025 à Washington, de jour zéro du technofascisme[^2]. En vérité, cette « chose » encore mal définie se répand depuis des décennies. Mais pas de fatalité. Pour nous arracher à la juridiction des centres de pouvoir oligarchique à titre individuel, collectif et institutionnel, nous pouvons réapprendre à nous informer, communiquer et nous organiser à travers des réseaux maillés à la surface des territoires, en utilisant des technologies anciennes : les livres et les autres objets culturels qui circulent comme eux de la main à la main. Après l’inquiétude monte l’espoir d’un réveil. Le Livre avec un grand L contre-attaque, et ce petit texte part à l’assaut des murailles adverses.
+
+
+
+
 
 # Quelle est cette chose ?
 
-Qui rampe, monte, gonfle, s’immisce peu à peu, par des gestes, des remarques, des pratiques, qui ne laisse rien présager de bon, soit parce qu’elle remet sur la scène de vieilles peurs, soit en préfigure de nouvelles. Il est peut-être prématuré de parler de technofascisme, parce que le fascisme a un passé lourd, terrible, et parce que croire avoir affaire à une réplique modernisée ne nous prépare pas à combattre la chose qui ne lui ressemble que par certains côtés.
+Qui rampe, monte, gonfle, s’immisce peu à peu, par des gestes, des remarques, des pratiques, qui ne laisse rien présager de bon, soit parce qu’elle remet sur la scène de vieilles peurs, soit en préfigure de nouvelles. Il est prématuré de parler de technofascisme, parce que le fascisme a un passé lourd, terrible, et parce que croire avoir affaire à une réplique modernisée ne nous prépare pas à combattre la chose qui ne lui ressemble que par certains côtés.
 
-Durant des années, Claude Lanzmann a parlé de la chose pour désigner *Shoah*[^3] : « Si j’avais pu ne pas nommer ce film, je l’aurais fait. Comment aurait-il pu y avoir un nom pour nommer un événement sans précédent dans l’histoire ? Je disais « la chose ». \[…] Ce sont des rabbins qui ont trouvé le nom de _Shoah_. Mais cela veut dire anéantissement, cataclysme, catastrophe naturelle. _Shoah_, c’est un mot hébreu que je ne comprends pas. Un mot opaque que personne ne comprendra. Un acte de nomination radicale. »
+Durant des années, Claude Lanzmann a parlé de « la chose » pour désigner *Shoah*[^3] : « Si j’avais pu ne pas nommer ce film, je l’aurais fait. Comment aurait-il pu y avoir un nom pour nommer un événement sans précédent dans l’histoire ? Je disais « la chose ». \[…] Ce sont des rabbins qui ont trouvé le nom de _Shoah_. Mais cela veut dire anéantissement, cataclysme, catastrophe naturelle. _Shoah_, c’est un mot hébreu que je ne comprends pas. Un mot opaque que personne ne comprendra. Un acte de nomination radicale. »
 
-Comment parler de ce qui nous arrive, là, tout de suite ? Les mots nous manquent. Comme Lanzmann, je parle de la chose pour ne pas user d’analogies trompeuses qui nous empêcheraient de nous donner une chance de résister. Je vais endosser le rôle de l’historien pour essayer de comprendre d’où vient la chose et comment nous avons pu la laisser prospérer jusqu’au point où son avènement est peut-être irrémédiable. Un long retour en arrière s’impose.
+Comment parler de ce qui nous arrive, là, tout de suite ? Les mots nous manquent. Comme Lanzmann, je parle de « la chose » pour ne pas user d’analogies trompeuses qui nous empêcheraient de nous donner une chance de résister. Je vais endosser le rôle de l’historien pour essayer de comprendre d’où vient « la chose » et comment nous avons pu la laisser prospérer jusqu’au point où son avènement est peut-être irrémédiable.
 
 La littérature anticipe souvent le pire. En 1920, près de trente ans avant *1984* d’Orwell, Evgueni Zamiatine imagine dans *Nous* une civilisation dystopique totalitaire aux individus réduits à des numéros et soumis par la technologie[^4]. L’ingénieur D-503 écrit dans la note 31 de son journal : « La dernière invention de la Science de l’État : le centre de l’imagination – un pauvre petit noyau dans la région du pont de Varole \[partie centrale et renflée du tronc cérébral]. Une triple irradiation de ce noyau, et vous êtes guéri de l’imagination… À jamais ! Vous êtes parfait – pareil à une machine, la voie du bonheur parfait vous est ouverte. Hâtez-vous – jeunes et vieux – soumettez-vous à la Grande Opération. Courez aux amphithéâtres où elle est pratiquée. Vive la Grande Opération. Vive l’État Unitaire, vive le Bienfaiteur ! »
 
@@ -273,6 +277,34 @@ Quand je pense à la chaîne de causalité : Unicast, Algorithmes, Populisme, j
 
 Peut-être est-il encore trop tôt pour nommer. Nous ne comprenons pas assez la chose pour la désigner, mais peut-être que la circonscrire suffit à la combattre, car ce régime fou, presque inhumain, n’est pas une fatalité.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Le livre : arme de résistance
 
 Dix mai 1933, Munich. Des étudiants hitlériens escortent des camions chargés de 20 000 livres jusqu’à la place de l’Opéra où ils les brûlent. Parmi eux, les œuvres d’Heinrich Heine, Karl Marx, Sigmund Freud, Albert Einstein, Franz Kafka, Stefan Zweig, Felix Mendelssohn. Des auteurs juifs. Joseph Goebbels prononce un discours durant l’autodafé.
@@ -370,6 +402,17 @@ Pour rester des armes contre la chose, les livres, qu’ils soient papier ou él
 Ces exigences ont beaucoup effrayé les éditeurs comme les auteurs parce qu’un ebook est plus facile à échanger qu’un livre papier. Dans beaucoup de pays, la voie de la répression réglementaire a été choisie pour lutter contre le « piratage », sans conscience que cette stratégie faisait le jeu de l’Unicast, donc des algorithmes et favorisait l’émergence de la chose.
 
 Mais on ne défend pas les auteurs en limitant les droits de leurs lecteurs, bien au contraire. Dans un environnement Multicast, la défense des auteurs passe par leur mise en avant, par la nécessité de les rémunérer, donc d’acheter leurs œuvres pour les soutenir et soutenir les libraires et les éditeurs. Le Multicast implique un partenariat entre tous les acteurs, conscients de participer à un réseau de résistance face au rouleau compresseur des algorithmes Unicast. Contre la répression, l’éducation est la meilleure réponse.
+
+
+
+
+
+
+
+
+
+
+
 
 # Le Livre avec un grand L
 
@@ -518,6 +561,22 @@ Aux institutions de militer pour l’ouverture. Elles-mêmes devraient cesser de
 5. Bien sûr, lire des Livres loin de l’agitation du temps réel et des algorithmes.
 6. Garder espoir. Quand Musk s’est mit à délirer, les ventes de Tesla se sont effondrées, peuves que nous autres utilisateurs/consommateurs ne sommes pas impuissants[^51].
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Lire, c’est résister
 
 Quand le fascisme s’installe, il commence par contrôler l’information. La chose ne fait pas exception, mais elle agit au nom de la liberté d’expression. Nous croyons choisir alors que des algorithmes nous choisissent. Nous pensons nous exprimer alors que nous alimentons des machines à avaler nos données.
@@ -533,53 +592,103 @@ Les Livres sont nos alliés dans cette guerre asymétrique contre les technocoll
 À travers les Livres, nous défendons notre liberté de penser, notre droit à la pluralité, notre capacité à imaginer d’autres futurs. Le Livre contre-attaque. Rejoignez le combat : lisez davantage, scrollez moins !
 
 [^1]: "Elon Musk et le salut nazi : trois questions sur le geste du patron de X", France Info, 24 janvier 2025. Ce geste aurait pu passer pour involontaire s’il avait été isolé. Un mois plus tard, "Steve Bannon, ancien conseiller de Donald Trump, effectue un geste nazi à la grand-messe américaine des conservateurs", *Le Monde*, 21 février 2025. Musk lui même publie un tweet où il accuse les fonctionnaires d’être responsables des atrocités commises par Hitler, Staline et Mao. Victor Tangermann, "Elon Musk Defends Hitler, Mao and Stalin", [Futurism.com](https://futurism.com/elon-musk-defends-hitler-mao-and-stalin), 14 mars 2025.
+
 [^2]: Prise de conscience actée par l’article "Headed for technofascism: the rightwing roots of Silicon Valley", *The Guardian*, 29 janvier 2025.
+
 [^3]: *Shoah* sur [Wikipédia](https://fr.wikipedia.org/wiki/Shoah).
+
 [^4]: Éditions Actes Sud, traduction Hélène Henry, février 2021.
+
 [^5]: Renzo De Felice, *Mussolini il fascista: La conquista del potere, 1921-1925*, Einaudi, 1966.
+
 [^6]: Henry A. Turner, *German Big Business and the Rise of Hitler*, Oxford University Press, 1985.
+
 [^7]: Edwin Black, *IBM et l’Holocauste*, Robert Laffont, 2001. Discussion sur le crédit apporté à sa thèse sur [Wikipédia](https://fr.wikipedia.org/wiki/Edwin_Black).
+
 [^8]: Janis Mimura, citée dans "Techno-Fascism Comes to America", *The New Yorker*, 26 février 2025.
+
 [^9]: *Les mots fascistes, du populisme à la dénazification*, [ENS Éditions](https://books.openedition.org/enseditions/2209).
+
 [^10]: "Forget Digital Utopia: We Could Be Headed for Technofascism", [*Upside*]( https://www.proquest.com/docview/218024392).
+
 [^11]: Alain Bihr, "Le fascisme ne passera plus", [*Réfractions* n° 34](https://revue-refractions.net/fr).
+
 [^12]: "DOGE Has ‘God Mode’ Access to Government Data", *The Atlantic*, 19 février 2025, cité par Hubert Guillaud, [*Dans les Algorithmes*](https://danslesalgorithmes.net/2025/03/04/doge-lefficacite-vraiment).
+
 [^13]: Sur l’Unicast, voir [Wikipédia](https://fr.wikipedia.org/wiki/Unicast).
+
 [^14]: Les adresses IP changent fréquemment, contrairement aux noms de domaine qui pointent vers elles.
+
 [^15]: Pas de serveur centralisé pour les liens, mais ils utilisent les noms de domaine stockés dans les serveurs DNS.
+
 [^16]: Sur le Multicast, voir [Wikipédia](https://fr.wikipedia.org/wiki/Multicast).
+
 [^17]: Tim O’Reilly, "What Is Web 2.0?", 30 septembre 2005, [Oreilly](https://www.oreilly.com/pub/a//web2/archive/what-is-web-20.html).
+
 [^18]: Dès, février 2004, lors de la mise à jour Brandy de l’algorithme Google, on découvre que la lutte s’intensifie contre les liens dits de peu de qualité. Cette politique ne cesse de se durcir au fil des années pour culminer en 2012 avec la version Penguin. Explications détaillées sur [Impressiondigital.com](https://www.impressiondigital.com/blog/key-google-algorithm-changes).
+
 [^19]: Laurent Lucas, "Google Confirme Enfin que les Liens Externes ou Backlinks ne Sont pas Aussi Importants", 2024. La véritable raison de la guerre contre les liens devient évidente : lutter contre le surf.
+
 [^20]: Thierry Crouzet, "Google hégémonique", 19 novembre 2007, [Tcrouzet.com](https://tcrouzet.com/2007/11/19/google-hegemonique/).
+
 [^21]: Fernand Braudel, _Civilisation matérielle, économie et capitalisme_; Karl Polanyi, _La Grande Transformation_; Immanuel Wallerstein, _Théorie du système-monde_.
+
 [^22]: Carlo Vercellone, "Sommes-nous sortis du capitalisme industriel ?", 2003. Sur le capitalisme de surveillance voir Shoshana Zuboff, 2014, [*La revue européenne des médias*](https://la-rem.eu/2019/07/capitalisme-de-surveillance/).
+
 [^23]: [globalwitness.org](https://globalwitness.org/en/campaigns/digital-threats/tiktok-and-x-recommend-pro-afd-content-to-non-partisan-users-ahead-of-the-german-elections/), "TikTok and X recommend pro-AfD content to non-partisan users ahead of the German elections", 21 février 2025.
+
 [^24]: [Christopher A. Bail](https://www.pnas.org/doi/10.1073/pnas.1804840115), "Exposure to opposing views on social media can increase political polarization", *PNAS*, 28 août 2018.
+
 [^25]: David Remnick, "Bill Gates : « Avec les réseaux sociaux et l’intelligence artificielle, je me rends compte que j’ai été assez naïf »", 12 avril 2025, [*Vanityfair*](https://www.vanityfair.fr/article/bill-gates-avec-les-reseaux-sociaux-et-intelligence-artificielle-je-me-rends-compte-que-jai-ete-assez-nai).
+
 [^26]: Antoine Blanchet, "Tentative de suicide, anorexie… Sa fille a vécu un calvaire : TikTok a agi comme une drogue", 20 novembre 2024, [Actu.fr](https://actu.fr/ile-de-france/creteil_94028/tentative-de-suicide-anorexie-sa-fille-a-vecu-un-calvaire-tiktok-a-agi-comme-une-drogue_61883195.html).
+
 [^27]: [Umberto Eco](https://www.lesnouveauxdissidents.org/single-post/2017/07/24/umberto-eco-14-signaux-pour-reconna%C3%AEtre-le-fascisme), "Ur-Fascisme", 1995.
+
 [^28]: Yanis Varoufakis, *Technofeudalism*, 2023. Cédric Durand, *Techno-féodalisme*, 2020.
+
 [^29]: "Operation In Our Sites", [Wikipedia](https://en.wikipedia.org/wiki/Operation_In_Our_Sites).
+
 [^30]: "La censure sur Internet, l’arme de répression du XXI<sup>e</sup> siècle", [TV5 Monde](https://information.tv5monde.com/international/censure-sur-internet-larme-de-repression-du-xxieme-siecle-26438).
+
 [^31]: Sur la Liste Otto, voir [Wikipédia](https://fr.wikipedia.org/wiki/Liste_Otto).
+
 [^32]: "La censure éditoriale", [Presses universitaires de la Sorbonne](https://books.openedition.org/pus/22003?lang=fr).
+
 [^33]: Sur le phénomène du Samizdat, voir [Wikipédia](https://fr.wikipedia.org/wiki/Samizdat).
+
 [^34]: "Shut Up and Pay Me", [*Pirate Wires*](https://www.piratewires.com/p/listen-up-bezos-shut-up-and-pay-me), 27 février 2025.
+
 [^35]: "JD Vance’s full speech on the fall of Europe", [*The Spectator*](https://www.spectator.co.uk/article/jd-vance-what-i-worry-about-is-the-threat-from-within/), 14 février 2025.
+
 [^36]: "Trump, Musk : l’hypnocratie ou l’empire des fantasmes", Jianwei Xun, [*Le Grand Continent*](https://legrandcontinent.eu/fr/2025/01/26/trump-musk-lhypnocratie-ou-lempire-des-fantasmes/), 26 janvier 2025.
+
 [^37]: Les ebooks ne représentent que [3 % des ventes de livres en 2025](https://modelesdebusinessplan.com/blogs/infos/marche-livre-chiffres), mais difficile de savoir combien ils représentent en termes de lecture.
+
 [^38]: Sur le Sneakernet, voir [Wikipédia](https://en.wikipedia.org/wiki/Sneakernet).
+
 [^39]: Mélanie Dulong de Rosnay, Francesca Musiani,, "Alternatives for the Internet: A Journey into Decentralised Network Architectures and Information Commons", *Internet Policy Review*, 2020.
+
 [^40]: "Contre la loi surveillance et narcotraficotage", [*La Quadrature du Net*](https://www.laquadrature.net/narcotraficotage/).
+
 [^41]: Aldo Leopold, _Almanach d’un comté des sables_, traduction Éric Chédaille, Gallmeister, 2022.
+
 [^42]: [Proton Mail](https://proton.me/fr/mail).
+
 [^43]: [Thunderbird](https://www.thunderbird.net/fr/).
+
 [^44]: Une analogie : un mail doit remonter à Paris, voire à New York, avant d’atterrir chez notre voisin. Une lettre se contente d’aller à la poste la plus proche et de revenir.
+
 [^45]: Attention, Substack reste une plateforme centralisée, propriétaire, qui récolte des données d’usage des auteurs comme des lecteurs, mais il est possible de la quitter en emportant les adresses email des abonnés, et de transporter une newsletter sur une autre plateforme. Le caractère déménageable des newsletters est très important.
+
 [^46]: Sur le Fediverse, voir [Wikipédia](https://fr.wikipedia.org/wiki/Fediverse).
+
 [^47]: [Très exactement 29,7 % en 2024](https://www.spocket.co/fr/statistiques/la-dominance-des-clients-de-messagerie).
+
 [^48]: Jocelyn Van Tuyl, *André Gide & la Seconde Guerre mondiale*, Presses universitaires de Lyon, 2017.
+
 [^49]: Luc Ferry, "Le danger mortel de l’open source et des deepfakes", *Le Figaro*, 29 janvier 2025.
+
 [^50]: "« L’origine du monde » : première victoire d’un David contre le Goliath Facebook", [*France Culture*](https://www.radiofrance.fr/franceculture/podcasts/le-billet-culturel/l-origine-du-monde-premiere-victoire-d-un-david-contre-le-goliath-facebook-9749421), 2 février 2018.
+
 [^51]: "Tesla's Earnings Are Even More Brutal Than We Expected", [Futurism](https://futurism.com/tesla-earnings-brutal-elon-musk), 22 avril 2025.

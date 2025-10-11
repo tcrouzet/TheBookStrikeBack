@@ -1,6 +1,28 @@
 @page {margin: 1.2em;}
 
-body{margin:0;padding:0;font-family:serif;font-weight:normal}
+@font-face {
+	font-family: 'TitleF';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/NotoSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'TitleB';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/NotoSans-Bold.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: "RegularF";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	src: url("../fonts/NotoSerif-Regular.ttf") format('truetype');
+}
+
+body{margin:0;padding:0;font-family:'RegularF',serif;font-weight:normal}
 a,a:visited,a:link{text-decoration:none}
 
 h1, h2, h3, div.page-beak {
@@ -17,13 +39,13 @@ p{
     -ms-hyphens: auto;
 }
 
-h1{color:#888;font-family:sans-serif,monospace;font-size:2em;margin-bottom:1em;margin-top:3em;margin-right:0em;margin-left:0em;text-indent:0em;text-align:center;padding-left:0em;padding-right:0em;padding-top:0em;page-break-inside:avoid;font-style:normal;hyphens:none}
+h1{color:#888;font-family:'TitleB',Arial,Helvetica,san-serif;font-size:2em;margin-bottom:1em;margin-top:3em;margin-right:0em;margin-left:0em;text-indent:0em;text-align:center;padding-left:0em;padding-right:0em;padding-top:0em;page-break-inside:avoid;font-style:normal;hyphens:none}
 
-h2{font-family:sans-serif,monospace;font-size:1.3em;margin-bottom:0em;margin-top:0em;margin-right:0em;margin-left:0em;text-indent:0em;text-align:center;font-style:normal;color:#000;padding-left:0em;padding-right:0em;padding-top:.20em;page-break-inside:avoid;hyphens:none; text-align: left;}
+h2{font-family:'TitleB',Arial,Helvetica,san-serif;font-size:1.3em;margin-bottom:0em;margin-top:0em;margin-right:0em;margin-left:0em;text-indent:0em;text-align:center;font-style:normal;color:#000;padding-left:0em;padding-right:0em;padding-top:.20em;page-break-inside:avoid;hyphens:none; text-align: left;}
 	
 h3{color:transparent;padding:14vh 0 12vh 0;text-align: center;}
 
-h4{color:#888;font-family:sans-serif;font-size:1.1em;font-weight:normal;margin-bottom:1em;margin-top:0em;margin-right:0em;margin-left:0em;text-indent:0em;text-align:left;padding-left:0em;padding-right:0em;padding-top:0em;page-break-inside:avoid;font-style:italic}
+h4{color:#060505;font-family:sans-serif;font-size:1.1em;font-weight:normal;margin-bottom:1em;margin-top:0em;margin-right:0em;margin-left:0em;text-indent:0em;text-align:left;padding-left:0em;padding-right:0em;padding-top:0em;page-break-inside:avoid;font-style:italic}
 
 h5{text-align:center;margin-bottom:0em;margin-top:0em;margin-right:0em;margin-left:0em;font-weight:normal;font-style:italic;line-height:1.2em}
 
@@ -76,3 +98,35 @@ hr{width:50%}
     text-decoration: none;
     margin-left: 0.5em;
 }
+
+
+.thin-space {
+    font-size: 0.7em;
+    display: inline;
+    white-space: nowrap;
+    letter-spacing: -0.1em;
+
+}
+
+.thin-space-before {
+    margin-left: 0.3em;
+}
+
+.thin-space-after {
+    margin-right: 0.3em;
+}
+
+p.tab{text-align: right;margin-bottom: 1em;margin-top: 0.25em}
+
+h3 + p, p.tab + p {
+    text-indent: 0em;
+}
+
+h3 + p::first-letter, p.tab + p::first-letter {
+  font-weight: bold;
+  font-family:'TitleB', Arial, Helvetica, sans-serif;
+}
+
+h1.unnumbered{display: none;}
+div.abstract{text-align: center;margin-top: 1em;}
+div.abstract-title{font-weight:normal;text-indent: 0;}
