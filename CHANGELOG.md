@@ -5,7 +5,7 @@ Toutes les modifications notables apportées au livre ou au templates seront doc
 ## [0.0.2] - 2025-10-11
 
 - tous les paramètres du livre en dur dans ./gen.sh
-- ajout de scripts lua pour la création des pub (gestion des espaces insécables)
+- ajout de scripts lua pour la création des epub (gestion des espaces insécables)
 
 
 ## [0.0.1] - 2025-04-25
